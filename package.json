@@ -4,10 +4,10 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "vite --config vite.config.dev.ts",
+    "build": "vite --config vite.config.prod.ts build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite --config vite.config.dev.ts preview"
   },
   "dependencies": {
     "@telegram-apps/sdk": "2.6.2",
