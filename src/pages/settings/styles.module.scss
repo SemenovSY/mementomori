@@ -1,0 +1,52 @@
+.page {
+  padding: 12px 12px;
+  max-width: 768px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.button {
+  margin-top: 16px;
+  padding: 8px 12px;
+  width: fit-content;
+  background-color: rgb(86, 86, 86);
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #494748;
+  transition: background-color ease .2s;
+
+  &--disabled {
+    background-color: #403e3fdb;
+    pointer-events: none;
+  }
+
+  &:hover {
+    @media (any-pointer: fine) {
+      cursor: pointer;
+      background-color: #494748db;
+    }
+  }
+
+  &:active {
+    background-color: #403e3fdb;
+  }
+}

@@ -1,0 +1,23 @@
+.section {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: -12px;
+  margin-right: -12px;
+  overflow-x: scroll;
+  overflow-y: auto;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &::before, &::after {
+    content: '';
+  }
+
+  &::before, &::after {
+    padding-left: 12px;
+  }
+}

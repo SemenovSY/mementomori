@@ -1,0 +1,7 @@
+.bar {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  filter: drop-shadow(-1px -1px 4px rgba(0, 0, 0, .7));
+  --webkit-filter: drop-shadow(-1px -1px 4px rgba(0, 0, 0, .7));
+}
+

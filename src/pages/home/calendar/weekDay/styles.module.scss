@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.alias {
+  font-size: 14px;
+  font-weight: 600;
+  color: #282828;
+  user-select: none;
+
+  &--colored {
+    color: #fff
+  }
+}
+
+.circle {
+  margin-top: 4px;
+  width: 60%;
+  border-radius: 50%;
+  background-color: #282828;
+  aspect-ratio: 1 / 1;
+
+  &--filled {
+    background-color: #fff;
+  }
+
+  &--current {
+    border: 2px solid #fff;
+    background-color: transparent;
+  }
+}

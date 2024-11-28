@@ -1,0 +1,43 @@
+.page {
+  padding: 0 12px;
+  max-width: 768px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.content {
+  display: grid;
+  width: 100%;
+  row-gap: 12px;
+  column-gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(3, max-content);
+  grid-template-areas:
+    "a b"
+    "c c"
+    "d e";
+}
+
+.progress {
+  grid-area: a;
+}
+
+.weeks {
+  grid-area: b;
+}
+
+.calendar {
+  grid-area: c;
+  aspect-ratio: 2 / 1 !important;
+}
+
+.settings {
+  grid-area: d;
+}
+
+.minutes {
+  grid-area: e;
+}

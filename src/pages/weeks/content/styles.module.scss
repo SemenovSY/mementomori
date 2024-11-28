@@ -1,0 +1,32 @@
+.content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(13, minmax(0, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 8px;
+}
+
+.circle {
+  margin-top: 4px;
+  width: 100%;
+  border-radius: 50%;
+  background-color: #f4f5f6;
+  aspect-ratio: 1 / 1;
+
+  &--filled {
+    background-color: #494748;
+  }
+
+  &--current {
+    border: 2px solid #f4f5f6;
+    background-color: transparent;
+  }
+}
+
+.skull {
+  font-size: 20px;
+
+  @media (min-width: 768px) {
+    font-size: 44px;
+  }
+}
