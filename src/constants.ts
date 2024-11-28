@@ -1,7 +1,7 @@
 export enum PATH {
-  HOME = '/',
-  SETTINGS = '/settings',
-  WEEKS = '/weeks'
+  HOME = '/mementomori/',
+  SETTINGS = '/mementomori/settings',
+  WEEKS = '/mementomori/weeks'
 };
 
 export const STORAGE_USER_DATA_KEY = 'userData'
