@@ -1,5 +1,4 @@
-import { useContext } from 'react';
-import NativeScrollBlock from './nativeScrollBlock';
+import { useState, useContext } from 'react';
 
 import { discharge } from './utils';
 import { UserContext } from '../../../context';
@@ -7,6 +6,8 @@ import { UserContext } from '../../../context';
 import styles from './styles.module.scss';
 
 const RemainingTime = () => {
+  const [currentPage, setCurrentPage] = useState(1)
+
   const { remainingTime } = useContext(UserContext); 
 
   const items = [
@@ -28,17 +29,21 @@ const RemainingTime = () => {
     }
   ]
 
+  const changePage = () => {
+    if(currentPage < items.length ) {
+      setCurrentPage((state) => state + 1)
+    } else {
+      setCurrentPage(1)
+    }
+  }
+
   return (
-    <NativeScrollBlock>
-      {
-        items.map(item => (
-          <div key={ item.unit } className={ styles.item }>
-            <p className={ styles.value }>{ discharge(item.value, ',') }</p>
-            <p className={ styles.unit }>{ item.unit }&nbsp;left</p>
-          </div>
-        ))
-      }
-    </NativeScrollBlock>
+    <section className={ styles.section } onClick={ changePage }>
+      <div className={ styles.item }>
+        <p className={ styles.value }>{ discharge(items[currentPage - 1].value, ',') }</p>
+        <p className={ styles.unit }>{ items[currentPage - 1].unit }&nbsp;left</p>
+      </div>
+    </section>
   )
 }
 

@@ -1,11 +1,11 @@
 import { useContext, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import dayjs from 'dayjs';
 
 import { UserContext } from '../../context';
 import { PATH, STORAGE_USER_DATA_KEY, TOTAL_YEARS_COUNT } from '../../constants';
 
 import styles from './styles.module.scss';
-import dayjs from 'dayjs';
 
 const Settings = () => {
   const ref = useRef(null);
@@ -39,8 +39,8 @@ const Settings = () => {
             type="date" 
             id="birthday" 
             name="birthday" 
-            min="1900-01-01" 
-            max="2099-22-23"
+            min={ dayjs().subtract(TOTAL_YEARS_COUNT, 'year').format('YYYY-MM-DD') }
+            max={ dayjs().format('YYYY-MM-DD') }
             ref={ ref }
           />
         </label>
